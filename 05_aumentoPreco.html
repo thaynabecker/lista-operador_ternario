@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: AUMENTO DE PREÇO
+    Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+    - até 280(inclusive): aumento de 20 %
+    - até 700(inclusive): aumento de 15 %
+    - até 1500(inclusive): aumento de 10 %
+    - acima de 1500: aumento de 5 %
+    */
+
+    //ENTRADA
+    const produto = Number(prompt(`Informe o preço do produto:`));
+
+    //PROCESSAMENTO
+    let mensagemFinal = "";
+    (produto <= 280) ? mensagemFinal = "O aumento do produto é de R$" + ((produto * 0.2).toFixed.replace(2)) :
+    (produto <= 700) ? mensagemFinal = "O aumento do produto é de R$" + ((produto * 0.15).toFixed.replace(2)) :
+    (produto <= 1500) ? mensagemFinal = "O aumento do produto é de R$" + ((produto * 0.1).toFixed.replace(2)) :
+    mensagemFinal = "O aumento do produto é de R$" + ((produto * 0.05).toFixed.replace(2));
+    
+    //SAÍDA
+    document.write(`${mensagemFinal}`);
+</script>
